@@ -14,7 +14,7 @@ namespace TennisBookings.Pages
 
         public async Task OnGet()
         {
-			var forecaster = new RandomWeatherForecaster();
+			var forecaster = new AmazingWeatherForecaster();
 
             try
             {
