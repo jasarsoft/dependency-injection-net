@@ -1,6 +1,6 @@
 namespace TennisBookings.Shared.Weather;
 
-public class AmazingWeatherForecaster
+public class AmazingWeatherForecaster : IWeatherForecaster
 {
 	public Task<WeatherResult> GetCurrentWeatherAsync(string city)
 	{
