@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IGuidService, GuidService>();
 builder.Services.AddSingleton<IGuidTrimmer, GuidTrimmer>();
+builder.Services.AddScoped<DisposableService>();
 
 var app = builder.Build();
 
