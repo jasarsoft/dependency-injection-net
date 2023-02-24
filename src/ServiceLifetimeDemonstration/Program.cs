@@ -1,10 +1,11 @@
 using ServiceLifetimeDemonstration;
 
 var builder = WebApplication.CreateBuilder(args);
+//builder.Host.UseDefaultServiceProvider(options => options.ValidateScopes = false);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddScoped<IGuidService, GuidService>();
+builder.Services.AddSingleton<IGuidService, GuidService>();
 builder.Services.AddSingleton<IGuidTrimmer, GuidTrimmer>();
 
 var app = builder.Build();
