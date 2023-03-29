@@ -12,20 +12,17 @@ namespace TennisBookings.Pages
 		private readonly BookingConfiguration _bookingConfiguration;
 		private readonly ICourtBookingManager _courtBookingManager;
         private readonly IBookingService _bookingService;
-		private readonly IUtcTimeService _utcTimeService;
 
 		public BookCourtModel(
 			UserManager<TennisBookingsUser> userManager,
 			IOptions<BookingConfiguration> bookingConfig,
 			ICourtBookingManager courtBookingManager,
-			IBookingService bookingService,
-			IUtcTimeService utcTimeService)
+			IBookingService bookingService)
         {
 			_userManager = userManager;
 			_bookingConfiguration = bookingConfig.Value;
 			_courtBookingManager = courtBookingManager;
             _bookingService = bookingService;
-			_utcTimeService = utcTimeService;
 		}
 
         public string[] Errors { get; set; } = Array.Empty<string>();

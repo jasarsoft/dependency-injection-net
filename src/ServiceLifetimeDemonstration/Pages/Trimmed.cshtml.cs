@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ServiceLifetimeDemonstration.Pages
 {
-	public class BoomModel : PageModel
+	public class TrimmedModel : PageModel
     {
 		private readonly IGuidTrimmer _guidTrimmer;
 
-		public BoomModel(IGuidTrimmer guidTrimmer)
+		public TrimmedModel(IGuidTrimmer guidTrimmer)
 		{
 			_guidTrimmer = guidTrimmer;
 		}
